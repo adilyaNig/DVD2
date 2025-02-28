@@ -8,7 +8,8 @@
       d:DesignHeight="550" d:DesignWidth="800" Background="PeachPuff"
       Title="DVD">
 
-    <Grid>
+    <Grid HorizontalAlignment="Center">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -22,38 +23,54 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBlock Text="DVD Shop"
+            FontSize="50"
+            VerticalAlignment="Center"
+            Grid.Row="0"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            TextAlignment="Center"
+            Foreground="Brown"
+            FontWeight="Bold" 
+                   Margin="10"
+            />
 
         <TextBlock Text="Авторизация"
-                   FontSize="35"
+                   FontSize="33"
                    VerticalAlignment="Center"
+                   Grid.Row="1"
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    TextAlignment="Center"
                    Foreground="Purple"
                    FontWeight="Bold" 
+                   Margin="10"
                    />
         <TextBlock Text="Логин"
             FontSize="17"
             Grid.Column="2"
-            Grid.Row="1"       
+            Grid.Row="2"       
             Grid.ColumnSpan="2"
             TextAlignment="Center"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-                   FontStyle="Italic" />
+                   FontStyle="Italic"
+                    />
         <TextBox x:Name="loginTb"
                  FontSize="22"
-                 Grid.Column="2"
-                 Grid.Row="1"       
+                 Grid.Column="2     "
+                 Grid.Row="2"       
                  Grid.ColumnSpan="2"
                  Height="40"
                  VerticalAlignment="Center"
-                 Padding="5"/>
+                 Padding="5"
+                  />
         <TextBlock Text="Пароль"
     FontSize="17"
     Grid.Column="2"
-    Grid.Row="2"       
+    Grid.Row="3"       
     Grid.ColumnSpan="2"
     TextAlignment="Center"
     HorizontalAlignment="Center"
@@ -62,21 +79,21 @@
         <TextBox x:Name="ParolTb"
                  FontSize="22"
                  Grid.Column="2"
-                 Grid.Row="2"       
+                 Grid.Row="3"       
                  Grid.ColumnSpan="2"
                  Height="40"
                  VerticalAlignment="Center"
                  Padding="5"
                  />
         <Button x:Name="btnV" Grid.Column="2"
-                Grid.Row="3"       
+                Grid.Row="4"       
                 Grid.ColumnSpan="2"
                  FontSize="22"
                 Height="50" Content="Войти"
                 FontFamily="Calibri"
                 Background="Pink" Click="btnV_Click"/>
         <Button x:Name="btnZ" Grid.Column="2"
-                Grid.Row="4"       
+                Grid.Row="5"       
                 Grid.ColumnSpan="2"
                  FontSize="18"
                  Height="50" 
