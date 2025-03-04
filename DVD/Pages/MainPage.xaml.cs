@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace DVD.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SignUpPage.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class SignUpPage : Page
+    public partial class MainPage : Page
     {
-        public SignUpPage()
+        public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void btnS_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnQr_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new QrFFF());
         }
     }
 }

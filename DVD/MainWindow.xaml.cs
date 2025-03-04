@@ -25,7 +25,7 @@ namespace DVD
         {
             InitializeComponent();
             newFrame.NavigationService.Navigate(new AuthorizationPage());
-
+            
         }
     }
 }
