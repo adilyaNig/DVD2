@@ -77,7 +77,7 @@
     HorizontalAlignment="Center"
     VerticalAlignment="Top"
                    FontStyle="Italic"/>
-        <TextBox x:Name="ParolTb"
+        <PasswordBox x:Name="ParolTb"
                  FontSize="22"
                  Grid.Column="2"
                  Grid.Row="3"       
