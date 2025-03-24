@@ -22,7 +22,7 @@ namespace DVD.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
-        public static Sotrudnik sotrudnik;
+        public static Employee sotrudnik;
 
         public AuthorizationPage()
         {

@@ -12,18 +12,13 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Vozrast
+    public partial class Authorization
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Vozrast()
-        {
-            this.Film = new HashSet<Film>();
-        }
-    
         public int id { get; set; }
-        public string Name { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public int id_role { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Film> Film { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

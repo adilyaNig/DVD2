@@ -10,11 +10,11 @@ namespace DVD.functions
 {
     public class Authorisation
     {
-        public static ObservableCollection<Sotrudnik> sotr { get; set; }
-        public static Sotrudnik AuthorisationSotr(int login, string password)
+        public static ObservableCollection<Employee> sotr { get; set; }
+        public static Employee AuthorisationSotr(int login, string password)
         {
-            sotr=new ObservableCollection<Sotrudnik>(Connection.Connection.dvd.Sotrudnik.ToList());
-            var userExists = sotr.Where(sotr => sotr.Id == login && sotr.Password == password).FirstOrDefault();
+            sotr=new ObservableCollection<Employee>(Connection.Connection.dvd.Employee.ToList());
+            var userExists = sotr.Where(sotr => sotr.id_employee == login && sotr.Lastname == password).FirstOrDefault();
             if (userExists != null)
             {
                 return userExists;

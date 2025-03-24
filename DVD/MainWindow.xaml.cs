@@ -24,7 +24,7 @@ namespace DVD
         public MainWindow()
         {
             InitializeComponent();
-            newFrame.NavigationService.Navigate(new AuthorizationPage());
+            newFrame.NavigationService.Navigate(new MainPage());
             
         }
     }

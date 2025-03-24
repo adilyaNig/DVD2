@@ -12,18 +12,23 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Zhanr
+    public partial class Rent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Zhanr()
+        public Rent()
         {
-            this.Film_Zhanr = new HashSet<Film_Zhanr>();
+            this.Cheque = new HashSet<Cheque>();
         }
     
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int id_rent { get; set; }
+        public System.DateTime DateOfIssue { get; set; }
+        public int id_client { get; set; }
+        public int id_employee { get; set; }
+        public System.DateTime DateOfDelivery { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Film_Zhanr> Film_Zhanr { get; set; }
+        public virtual ICollection<Cheque> Cheque { get; set; }
+        public virtual Client Client { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

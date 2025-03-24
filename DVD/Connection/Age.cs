@@ -12,23 +12,18 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Sotrudnik
+    public partial class Age
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sotrudnik()
+        public Age()
         {
-            this.Arenda = new HashSet<Arenda>();
+            this.Film = new HashSet<Film>();
         }
     
-        public int Id { get; set; }
-        public string FIO { get; set; }
-        public string Phone { get; set; }
-        public Nullable<int> Id_role { get; set; }
-        public Nullable<double> Salary { get; set; }
-        public string Password { get; set; }
+        public int id { get; set; }
+        public string Title { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Arenda> Arenda { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual ICollection<Film> Film { get; set; }
     }
 }

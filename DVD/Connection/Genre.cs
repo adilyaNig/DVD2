@@ -12,23 +12,18 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Arenda
+    public partial class Genre
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Arenda()
+        public Genre()
         {
-            this.Check = new HashSet<Check>();
+            this.Film = new HashSet<Film>();
         }
     
-        public int Id { get; set; }
-        public Nullable<System.DateTime> D_vidachi { get; set; }
-        public Nullable<int> id_client { get; set; }
-        public Nullable<int> id_sotrudnika { get; set; }
-        public Nullable<System.DateTime> D_sdachi { get; set; }
+        public int id_genre { get; set; }
+        public string Title { get; set; }
     
-        public virtual Client Client { get; set; }
-        public virtual Sotrudnik Sotrudnik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Check> Check { get; set; }
+        public virtual ICollection<Film> Film { get; set; }
     }
 }

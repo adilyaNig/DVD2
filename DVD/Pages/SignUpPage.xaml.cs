@@ -27,7 +27,7 @@ namespace DVD.Pages
 
         private void btnS_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new MainPage());
         }
 
         private void btnQr_Click(object sender, RoutedEventArgs e)

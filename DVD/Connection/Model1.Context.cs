@@ -13,10 +13,10 @@ namespace DVD.Connection
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DVDEntities1 : DbContext
+    public partial class CinemaEntities : DbContext
     {
-        public DVDEntities1()
-            : base("name=DVDEntities1")
+        public CinemaEntities()
+            : base("name=CinemaEntities")
         {
         }
     
@@ -25,15 +25,15 @@ namespace DVD.Connection
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Arenda> Arenda { get; set; }
-        public virtual DbSet<Check> Check { get; set; }
+        public virtual DbSet<Age> Age { get; set; }
+        public virtual DbSet<Authorization> Authorization { get; set; }
+        public virtual DbSet<Cheque> Cheque { get; set; }
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Film> Film { get; set; }
-        public virtual DbSet<Film_Zhanr> Film_Zhanr { get; set; }
+        public virtual DbSet<Genre> Genre { get; set; }
+        public virtual DbSet<Rent> Rent { get; set; }
         public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<Sotrudnik> Sotrudnik { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Vozrast> Vozrast { get; set; }
-        public virtual DbSet<Zhanr> Zhanr { get; set; }
     }
 }

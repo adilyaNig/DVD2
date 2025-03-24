@@ -12,24 +12,27 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Film
+    public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Film()
+        public Employee()
         {
-            this.Cheque = new HashSet<Cheque>();
+            this.Authorization = new HashSet<Authorization>();
+            this.Rent = new HashSet<Rent>();
         }
     
-        public int id_film { get; set; }
-        public string Title { get; set; }
-        public int id_genre { get; set; }
-        public int id_age { get; set; }
-        public double Price { get; set; }
-        public Nullable<bool> IsDelete { get; set; }
+        public int id_employee { get; set; }
+        public string Lastname { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Phone { get; set; }
+        public int id_role { get; set; }
+        public double Salary { get; set; }
     
-        public virtual Age Age { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cheque> Cheque { get; set; }
-        public virtual Genre Genre { get; set; }
+        public virtual ICollection<Authorization> Authorization { get; set; }
+        public virtual Role Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Rent> Rent { get; set; }
     }
 }

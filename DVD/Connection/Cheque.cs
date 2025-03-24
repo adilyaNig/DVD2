@@ -12,13 +12,13 @@ namespace DVD.Connection
     using System;
     using System.Collections.Generic;
     
-    public partial class Film_Zhanr
+    public partial class Cheque
     {
-        public int Id { get; set; }
-        public Nullable<int> Id_Film { get; set; }
-        public Nullable<int> Id_Zhanr { get; set; }
+        public int id_cheque { get; set; }
+        public int id_rent { get; set; }
+        public int id_film { get; set; }
     
         public virtual Film Film { get; set; }
-        public virtual Zhanr Zhanr { get; set; }
+        public virtual Rent Rent { get; set; }
     }
 }

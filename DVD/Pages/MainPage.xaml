@@ -6,13 +6,12 @@
       xmlns:local="clr-namespace:DVD.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainPage" Background="LavenderBlush">
+      Title="Главная страница" Background="LavenderBlush">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -27,8 +26,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+         
         </Grid.RowDefinitions>
         <TextBlock Text="поиск"
     FontSize="30"
@@ -41,13 +39,32 @@
     FontWeight="Bold" 
            Margin="10"
     />
-        <TextBox x:Name="tbPoisk"
+        <TextBox x:Name="tbSearch"
                  FontSize="22"
                  Grid.Column="4"
                  Grid.Row="0"       
-                 Grid.ColumnSpan="5"
+                 Grid.ColumnSpan="2"
                  Height="40"
                  VerticalAlignment="Center"
-                 Padding="5" />
+                 Padding="5" SelectionChanged="tbSearch_SelectionChanged"/>
+        <ComboBox x:Name="cbSort" Grid.Column="6" Grid.Row="0" SelectionChanged="cbSort_SelectionChanged"/>
+        <ComboBox x:Name="cbFiltr" Grid.Column="7" Grid.Row="0" SelectionChanged="cbFiltr_SelectionChanged"/>
+        <ListView x:Name="LvMain"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="5" 
+                  Grid.RowSpan="5" SelectionChanged="LvMain_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" FontSize="28" />
+                        <TextBlock Text="{Binding Price}" FontSize="28"/> 
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Назад" Click="Button_Click"/>
     </Grid>
 </Page>
